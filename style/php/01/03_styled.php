@@ -7,13 +7,13 @@
 class EMail
 {
     /** @var string */
-    public $header;
-
-    /** @var string */
     public $content = 'bar';
 
     /** @var string */
     public $from;
+
+    /** @var string */
+    public $header;
 
     /** @var string */
     private $to;

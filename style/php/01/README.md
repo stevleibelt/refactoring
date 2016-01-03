@@ -31,11 +31,18 @@ One last word. There is a small line between well know general styling and organ
 
 ### From [02](https://github.com/stevleibelt/refactoring/blob/master/style/php/01/02_basically_styled.php) to [03](https://github.com/stevleibelt/refactoring/blob/master/style/php/01/03_styled.php)
 
-* if possible (meaning when not breaking the public API), I renamed properties or methods by having "explain what they are doing" in mind
+* if possible (meaning when not breaking the public API), I renamed properties or methods by having "explain what they are doing" in mind. Breaking the public API would be if:
+    * I would have made the properties *$content*, *$from* and *$header* private
+    * I would have renamed the properties *$content* to *$textContent*, *$header* to *$subject*
+    * I would have renamed the methods *text()* to *setTextContent()*, *addHtml* to *setHtmlContentIfNotAlreadySet()*
+    * I would have removed the " = null" in the constructor for the properties *$from*, *$to* and *$html*
+    * I would have removed the initial value *'bar'* for *$content*
 * I removed early returns and made sure than always something is returned if at least one thing was returned in the past
 * removed duplicated code by creating fitting methods
 * added helper methods to easy up code reading
 * added variables to easy up code reading
+* I added a "dependency" section in the public method *send()* to easy up gaining overview above the internal used properties
+* finally, I replaced the *"From: $this->from"* with *'From: ' . $from* since you do not have to parse the string also
 
 ### From [03](https://github.com/stevleibelt/refactoring/blob/master/style/php/01/03_styled.php) to [04](https://github.com/stevleibelt/refactoring/blob/master/style/php/01/04_refactored.php)
 
