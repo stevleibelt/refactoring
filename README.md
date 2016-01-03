@@ -6,4 +6,4 @@ Free as in freedom repository to show refactoring techniques.
 
 ### Style
 
-* [style a php mail class](/tree/master/style/php/01)
+* [style a php mail class](tree/master/style/php/01)
