@@ -155,6 +155,7 @@ class MailDispatcher
 {
     /**
      * @param Mail $mail
+     * @throws RuntimeException
      */
     public function tryToSendTheMailOrThrowARuntimeException(Mail $mail)
     {
